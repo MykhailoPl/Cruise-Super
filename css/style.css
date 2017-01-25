@@ -1,3 +1,111 @@
 *{
-    background-color: #999;
+    margin: 0;
+    padding: 0;
+   
+}
+body {
+    background: url("../src/background.png");
+    max-width: 1600px;
+    margin: 0 auto;
+    
+}
+header{
+    display: flex;
+    flex-direction:column;
+    background-color: white;
+    align-items:stretch;
+}
+.top-header{
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items:center;
+    padding: 15px;
+}
+.logo{
+    display: flex;
+    align-items:center;
+}
+.logo-name span{
+    font-family: 'Exo 2';
+    font-size:11pt;
+    font-weight:bold;
+    color: #189ea9;
+}
+.search{
+    margin: 10px;
+}
+form{
+    padding: 0 30px 0 40px;
+    
+}
+input[type="search"] {
+  width: 400px;
+  height: 40px;
+  color: #c9caca;
+  font-family: 'PT Sans';
+  font-size: 10pt;
+  font-style:italic;
+  padding-left: 10px;
+  /*ховер #547d01*/
+   background-image: url(../src/search.png); 
+   background-position: 378px 10px; 
+   background-repeat: no-repeat; 
+   border-color:#c9caca;
+   border-width:1px;
+}
+#email{
+font-family:'PT Sans';
+  font-size:16pt;
+  font-weight:bold;
+  color: #1594a5;
+}
+.social-links p{
+    font-family: 'PT Sans';
+  font-size: 16pt;
+  font-weight:bold;
+  color:#3c4040;
+}
+.social-links button{
+    background-color: #6ea206;
+    background-image: url(../src/vk.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    border: none;
+    border-radius: 5px;
+    width: 42px;
+    height:42px;
+    /*padding: 15px 32px;*/
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    /*display: inline-block;*/
+    /*font-size: 16px;*/
+}
+.header-menu{
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background-color: rgb(21, 148, 165);
+    width: 100%;
+    font-family: 'Exo 2';
+    font-size:14pt;
+    color: #ffffff;
+    /*border:1px dotted;*/
+}
+.header-menu div {
+    background-color: rgb(21, 148, 165);
+    padding: 15px 15px;
+    
+}
+.header-menu div:hover {
+    background-color:#0b7e8d;
+    
+}
+main{
+    background-color: white;
+    margin: 0 120px;
+}
+section{
+    height: 100px;
+    border:1px dotted;
 }
