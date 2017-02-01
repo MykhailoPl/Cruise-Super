@@ -1,112 +1,539 @@
-*{
-    margin: 0;
-    padding: 0;
-   
-}
 body {
     background: url("../src/background.png");
     max-width: 1600px;
     margin: 0 auto;
-    
 }
-header{
+
+header {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     background-color: white;
-    align-items:stretch;
+    align-items: stretch;
 }
-.top-header{
+
+.top-header {
     display: flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    align-items:center;
-    padding: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 15px 15px 15px;
 }
-.logo{
+
+.logo {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
-.logo-name span{
+.logo a{
+    margin-right: 5px;
+}
+.logo span {
     font-family: 'Exo 2';
-    font-size:11pt;
-    font-weight:bold;
+    font-size: 11px;
+    font-weight: bold;
     color: #189ea9;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
 }
-.search{
+
+.search {
     margin: 10px;
 }
-form{
-    padding: 0 30px 0 40px;
+
+form {
+    padding: 0 40px 0 40px;
+}
+
+input[type="search"] {
+    width: 400px;
+    height: 40px;
+    color: #c9caca;
+    font-family: 'PT Sans';
+    font-size: 10pt;
+    font-style: italic;
+    padding-left: 10px;
+    background-image: url(../src/search.png);
+    background-position: 378px 10px;
+    background-repeat: no-repeat;
+    border-color: #c9caca;
+    border-width: 1px;
+}
+
+form:focus {
+    outline: none;
+}
+.social-links{
+    margin-top: 10px;
     
 }
-input[type="search"] {
-  width: 400px;
-  height: 40px;
-  color: #c9caca;
-  font-family: 'PT Sans';
-  font-size: 10pt;
-  font-style:italic;
-  padding-left: 10px;
-  /*ховер #547d01*/
-   background-image: url(../src/search.png); 
-   background-position: 378px 10px; 
-   background-repeat: no-repeat; 
-   border-color:#c9caca;
-   border-width:1px;
-}
-#email{
-font-family:'PT Sans';
-  font-size:16pt;
-  font-weight:bold;
-  color: #1594a5;
-}
-.social-links p{
+.social-links .mail {
     font-family: 'PT Sans';
-  font-size: 16pt;
-  font-weight:bold;
-  color:#3c4040;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #1594a5;
 }
-.social-links button{
+.social-links a {
+    font-family: 'PT Sans';
+    font-size: 16pt;
+    font-weight: bold;
+    color: #3c4040;
+    margin: 10px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.social-links button {
     background-color: #6ea206;
-    background-image: url(../src/vk.png);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     border: none;
     border-radius: 5px;
     width: 42px;
-    height:42px;
-    /*padding: 15px 32px;*/
-    /*text-align: center;*/
-    /*text-decoration: none;*/
-    /*display: inline-block;*/
-    /*font-size: 16px;*/
+    height: 42px;
 }
-.header-menu{
+.social-links button:hover{
+    background-color:#547d01;
+}
+.social-links .vk{
+    background-image: url(../src/vk.png);
+}
+.social-links .fb{
+    background-image: url(../src/fb.png);
+}
+.social-links .tw{
+    background-image: url(../src/tw.png);
+}
+.social-links .ins{
+    background-image: url(../src/ins.png);
+}
+.social-links .ok{
+    background-image: url(../src/ok.png);
+}
+.header-menu {
     display: flex;
-    justify-content:center;
-    flex-wrap:wrap;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: rgb(21, 148, 165);
-    width: 100%;
-    font-family: 'Exo 2';
-    font-size:14pt;
-    color: #ffffff;
-    /*border:1px dotted;*/
-}
-.header-menu div {
-    background-color: rgb(21, 148, 165);
-    padding: 15px 15px;
-    
-}
-.header-menu div:hover {
-    background-color:#0b7e8d;
-    
-}
-main{
-    background-color: white;
-    margin: 0 120px;
-}
-section{
-    height: 100px;
-    border:1px dotted;
 }
 
+.header-menu div {
+    background-color: rgb(21, 148, 165);
+    padding: 15px 20px;
+    font-family: 'Exo 2';
+    font-size: 12pt;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header-menu div:hover {
+    background-color: #0b7e8d;
+}
+
+main {
+    background-color: white;
+    margin: 0 5%;
+}
+.specpred{
+margin: 0 auto;
+}
+.specpred .line-center{
+    width: 96%;
+    margin: 0 auto;
+}
+
+.line {
+    font-size: 14px;
+    font-family: "Exo 2";
+    color: #3c4040;
+    text-align: center;
+    position: relative;
+    padding-top: 45px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.line span {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    padding: 0 10px;
+    margin: 0;
+    bottom: 17px;
+}
+
+.line:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #c9caca;
+    position: absolute;
+    top: 60%;
+    z-index: 0;
+}
+
+.carusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 30px 0;
+}
+
+.offer {
+    margin: 5px;
+    padding: 15px;
+    background-color: #f3f4f5;
+}
+
+.offer a {
+    background-color: #6ea206;
+    border-radius: 5px;
+    width: 96%;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Exo 2";
+}
+.offer a:hover{
+     background-color: #547d01;
+}
+.offer h1 {
+    color: #3c4040;
+    font-family: PT Sans;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.offer p {
+    color: #3c4040;
+    font-family: PT Sans;
+    font-size: 14pt;
+    line-height: 0.1;
+    margin-top: 0.8em;
+    padding-right: 20px;
+}
+
+.red {
+    color: #fa631e;
+    font-family: PT Sans;
+    font-weight: bold;
+}
+
+.offer img {
+    margin-right: 5px;
+}
+
+.podpiska {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+}
+
+.strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1594a5;
+    height: 94px;
+    width: 95%;
+}
+
+.strip input[type="text"] {
+    background-color: #1594a5;
+    border-color: #8ccbd3;
+    color: #8ccbd3;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'PT Sans';
+    font-size: 14pt;
+    font-style: italic;
+    padding-left: 10px;
+    width: 240px;
+    height: 26px;
+    margin: 5px;
+}
+
+.strip input[type="submit"] {
+    margin: 5px;
+    background-image: url(../src/bt-subscript.png);
+    background-color: #1594a5;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.strip p {
+    font-family: "Exo 2";
+    font-size: 20px;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.article p {
+    margin: 25px;
+    font-family: "Exo 2";
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.article h2 {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 16pt;
+    line-height: 2.5;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.welcome {
+    max-width: 870px;
+    margin: 70px auto 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f5;
+}
+
+.foto {
+    flex: 1;
+    background-image: url(../src/foto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.welcome blockquote {
+    font-family: "PT Sans";
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.welcome a{
+    color: #0d8898;
+}
+.welcome a:visited{
+    color: #046976;
+}
+.down img {
+    display: block;
+    margin: -8px auto 50px auto;
+}
+
+.chto-imenno h2 {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 16pt;
+    line-height: 2.5;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.ico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.items {
+    width: 185px;
+    margin: 15px;
+    text-align: center;
+}
+
+.items p {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 11pt;
+    line-height: 1.3;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+section h2 {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 16pt;
+    line-height: 2.5;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pochemu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pochemu h2 {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 10pt;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+}
+
+.pochemu>div {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 15px;
+    font-family: "PT Sans";
+    font-size: 18px;
+    color: #3c4040;
+}
+
+.pochemu>div span {
+    font-family: "PT Sans";
+    font-size: 80px;
+    color: #fa631e;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.pochemu>div h3 {
+    font-family: "PT Sans";
+    font-size: 14px;
+    color: #3c4040;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    margin: 20px 20px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.post {
+    padding: 40px;
+}
+
+.post blockquote {
+    display: block;
+    font-family: "PT Sans";
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 75%;
+    padding: 30px;
+    margin: 0 10%;
+    background-color: #f3f4f5;
+    color: #3c4040;
+}
+.post a{
+    color: #0d8898;
+}
+.post a:visited{
+    color: #046976;
+}
+footer {
+    width: 100%;
+    background-color: rgb(21, 148, 165);
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 120px;
+    height: 54px;
+    padding: 15px;
+    font-family: 'Exo 2';
+    font-size: 14pt;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+footer div {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.copir {
+    flex: 2;
+    text-align: left;
+    font-family: "Exo 2";
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.8;
+}
+
+.mail a {
+    font-family: "PT Sans";
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.mail img {
+    position: relative;
+    top: 4px;
+    right: 3px;
+}
+
+.soc-ico img {
+    margin: 0 5px;
+}
+
+.soc-ico button {
+    background-color: rgb(21, 148, 165);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.soc-ico button:hover {
+    background-color: #0b7e8d;
+}
+
+.soc-ico .vk {
+    background-image: url(../src/ico-vk.png);
+}
+
+.soc-ico .f {
+    background-image: url(../src/ico-f.png);
+}
+
+.soc-ico .twi {
+    background-image: url(../src/ico-twi.png);
+}
+
+.soc-ico .inst {
+    background-image: url(../src/ico-inst.png);
+}
+
+.soc-ico .ok {
+    background-image: url(../src/ico-ok.png);
+}
+
+.desig {
+    font-family: "PT Sans";
+    font-size: 14px;
+    color: #8ccbd3;
+}
+
+.desig a {
+    color: #8ccbd3;
+    font-weight: bold;
+}
