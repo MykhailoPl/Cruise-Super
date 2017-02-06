@@ -1,6 +1,11 @@
+
+*{
+    transition: all .2s;
+}
 body {
     background: url("../src/background.png");
     max-width: 1600px;
+    min-width: 320px;
     margin: 0 auto;
 }
 
@@ -145,17 +150,8 @@ form:focus {
 main {
     background-color: white;
     margin: 0 5%;
+    padding: 0 2%;
 }
-
-.specpred {
-    margin: 0 auto;
-}
-
-.specpred .line-center {
-    width: 96%;
-    margin: 0 auto;
-}
-
 .line {
     font-size: 14px;
     font-family: "Exo 2";
@@ -190,19 +186,6 @@ main {
 
 /*.carusel {*/
 
-
-/*    display: flex;*/
-
-
-/*    justify-content: center;*/
-
-
-/*    align-items: center;*/
-
-
-/*    margin: 0px 0 30px 0;*/
-
-
 /*}*/
 
 .offer {
@@ -213,11 +196,20 @@ main {
 
 .slick-prev,
 .slick-next {
-    background-image: url(../src/left.png);
+    
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.slick-prev{
+    background-image: url(../src/right.png);
+    left:-15px;
+   
+}
+.slick-next{
+    background-image: url(../src/left.png);
+   right: -15px;
+}
 .offer a {
     background-color: #6ea206;
     border-radius: 5px;
@@ -272,7 +264,6 @@ main {
 .podpiska {
     display: flex;
     justify-content: center;
-    padding: 0 10px 0 10px;
     margin: 25px 0 0 0;
 }
 
@@ -283,7 +274,7 @@ main {
     align-items: center;
     background-color: #1594a5;
     height: 94px;
-    width: 95%;
+    width: 100%;
 }
 
 .strip input[type="text"] {
@@ -347,9 +338,14 @@ main {
 
 .foto {
     flex: 1;
-    background-image: url(../src/foto.png);
+    position: relative;
+    background-image: url(../src/border.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+.foto .border-foto{
+    position: absolute;
+    top:-15px;
 }
 
 .welcome blockquote {
@@ -456,15 +452,23 @@ section h2 {
     font-weight: bold;
 }
 
-.partners {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    margin: 20px 20px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+.slider-partners{
+    width: 97%;
+    margin: 0 auto;
 }
 
+.partners-items img{
+    margin: 5px;
+}
+.partners .slick-prev{
+    left: -25px;
+}
+.partners .slick-next{
+    right: -25px;
+}
+.partners .line-center{
+    padding: 12px 0;
+}
 .post {
     padding: 40px;
 }
@@ -477,7 +481,7 @@ section h2 {
     line-height: 1.5;
     width: 75%;
     padding: 30px;
-    margin: 0 10%;
+    margin: 0 auto;
     background-color: #f3f4f5;
     color: #3c4040;
 }
@@ -498,13 +502,13 @@ footer {
 .footer-main {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 120px;
-    height: 54px;
+    margin: 0 auto;
     padding: 15px;
     font-family: 'Exo 2';
     font-size: 14pt;
     color: #ffffff;
     box-sizing: border-box;
+    justify-content:center;
 }
 
 footer div {
@@ -583,3 +587,160 @@ footer div {
     color: #8ccbd3;
     font-weight: bold;
 }
+  
+  /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
+  
+  
+@media only screen and (max-width:600px){
+   
+.top-header {
+    padding: 20px 5px 5px 5px;
+}
+.search {
+    margin: 5px;
+}
+
+form {
+    padding: 0;
+}
+
+input[type="search"] {
+    width: 320px;
+    height: 40px;
+    background-position: 295px 10px;
+}
+.social-links {
+    margin: 17px;
+}
+
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(21, 148, 165);
+}
+
+.header-menu div {
+    padding: 5px 10px;
+   
+}
+
+ main {
+    background-color: white;
+    margin: 0 0;
+    padding: 0 1%;
+}
+
+
+.strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1594a5;
+    height: 160px;
+    width: 100%;
+    border-radius: 5px;
+}
+    .podpiska .podpiska-pointer{
+        display: none;
+    }
+    
+
+.strip input[type="text"] {
+    width: 100%;
+    
+}
+
+.strip input[type="submit"] {
+    border: none;
+    width: 100%;
+    height: 25px;
+    border-radius:5px;
+}
+.article p {
+    margin: 5px;
+}
+
+.article h2 {
+    line-height: 1.8;
+}
+
+.welcome {
+    width:100%;
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #f3f4f5;
+}
+
+.foto {
+    flex: 1;
+    position: relative;
+}
+.foto .border-foto{
+    position: absolute;
+    top:-15px;
+}
+
+.chto-imenno h2 {
+    line-height: 2.1;
+}
+
+.ico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section h2 {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 16pt;
+    line-height: 2.1;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.pochemu>div {
+    width: 100%;
+   
+}
+
+.pochemu>div span {
+    display: none;
+}
+
+.post {
+    padding: 5px;
+}
+
+.post blockquote {
+    width: 100%;
+    padding: 0px;
+   
+}
+     .post .down img {
+    display: block;
+    margin: -20px auto 30px auto;
+}
+footer {
+    width: 100%;
+    background-color: rgb(21, 148, 165);
+}
+
+.footer-main {
+    padding: 5px;
+}
+
+footer div {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.copir {
+    font-size: 11px;
+}
+
+.desig a {
+    padding: 20px;
+}}
