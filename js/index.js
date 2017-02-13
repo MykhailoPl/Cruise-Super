@@ -28,31 +28,38 @@ $(document).ready(function(){
   $('.slider-partners').slick({
     infinite: true,
      
-      slidesToShow: 8,
+      slidesToShow: 7,
       autoplay: true,
       autoplaySpeed: 3000,
       responsive: [
     {
       breakpoint: 1290,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 5,
         slidesToScroll: 1
       }
     },
     {
-      breakpoint: 890,
+      breakpoint: 900,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 720,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
       }
-    }
+    },
+     {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
    ]
       
   });
